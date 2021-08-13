@@ -1,8 +1,8 @@
 1. COMPONENTES
 Integrantes do grupo
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com
-segundo_componente_do_grupo:email_segundo_componente@dominio.com
-...
+João Pedro de Oliveira Nascente: joaopedro_nascente@outlook.com
+Enthoni Araújo Fontis Serafim: enthoniafs@gmail.com
+João Pedro Ribeiro Silva:
 
 2.MINIMUNDO
 Descrever o mini-mundo! (Não deve ser maior do que 30 linhas, se necessário resumir para justar) Entrevista com o usuário e identificação dos requisitos.(quando for o caso de sistemas com cliente real) Descrição textual das regras de negócio definidas como um subconjunto do mundo real cujos elementos são propriedades que desejamos incluir, processar, armazenar, gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
