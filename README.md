@@ -1,8 +1,8 @@
 1. COMPONENTES
 Integrantes do grupo
 João Pedro de Oliveira Nascente: joaopedro_nascente@outlook.com
-Enthoni Araújo Fontis Serafim: enthoniafs@gmail.com
-João Pedro Ribeiro Silva: TESTE
+Enthoni Araújo Fontis Serafim: enthoni.afs@gmail.com
+João Pedro Ribeiro Silva: johncod3fla@gmail.com
 
 2.MINIMUNDO
 Descrever o mini-mundo! (Não deve ser maior do que 30 linhas, se necessário resumir para justar) Entrevista com o usuário e identificação dos requisitos.(quando for o caso de sistemas com cliente real) Descrição textual das regras de negócio definidas como um subconjunto do mundo real cujos elementos são propriedades que desejamos incluir, processar, armazenar, gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
