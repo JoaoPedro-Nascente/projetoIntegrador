@@ -11,7 +11,7 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 ### 2.MINIMUNDO<br>
 
-> O sistema proposto para a disciplina de projeto integrador conterá as informacões sobre entregadores disponíveis para entrega de protudos de lojas(com suas informações) da grande vitoria e informações sobre o proputo juntamente com o cliente(e suas informações). Dos entregadores serão armazenados os contatos e nome. Das lojas serão armazenados o contato, nome, cnpj e o endereço. O cliente terá armazenado o nome, o contato e o endereço. O pedido tera a data que foi feito e o status(entregue ou não). O cliente pode fazer vários pedidos, mas um pedido só tem um cliente. Um cliente pode pedir de várias loja, e uma loja pode ter vários clientes. Um entregador pode ter vários pedidos, e um pedido só tem um entregador. Esse projeto tem como visão abordar somente a grande vitória.
+> O sistema proposto para a disciplina de projeto integrador conterá as informacões sobre entregadores disponíveis para entrega de protudos de lojas(com suas informações) da grande vitoria e informações sobre o proputo juntamente com o cliente(e suas informações). Dos entregadores serão armazenados os contatos e nome. Das lojas serão armazenados o contato, nome, cnpj e o endereço. O cliente terá armazenado o nome, o contato e o endereço. O pedido tera a data que foi feito e o status(entregue ou não). O cliente pode fazer vários pedidos, mas um pedido só tem um cliente. Um cliente pode pedir de várias loja, e uma loja pode ter vários clientes. Um entregador pode ter vários pedidos, e um pedido só tem um entregador. Esse projeto tem como visão abordar somente a grande Vitória.
  
 
 ### 3.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
@@ -19,8 +19,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 Sugestão: https://balsamiq.com/products/mockups/<br>
 
-![Alt text](https://github.com/discproint/template_projeto_integrador/blob/main/arquivos/balsamiq.png?raw=true "Title")
-![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom](https://github.com/discproint/template_projeto_integrador/blob/main/arquivos/EmpresaDevcom.pdf?raw=true "Empresa Devcom")
+![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/mockuppic.png?raw=true "Title")
+![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/mockup.pdf?raw=true "Projeto entregador")
 
 
 #### 3.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
