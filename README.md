@@ -1,4 +1,4 @@
-# TRABALHO DE PI:  Título do Trabalho
+# TRABALHO DE PI:  Projeto entregador
 Trabalho desenvolvido durante a disciplina de Banco de Dados do Integrado
 
 # Sumário
@@ -15,9 +15,6 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
  
 
 ### 3.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-Neste ponto a codificação não e necessária, somente as ideias de telas devem ser desenvolvidas. O princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas e/ou descartadas <br>
-
-Sugestão: https://balsamiq.com/products/mockups/<br>
 
 ![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/mockuppic.png?raw=true "Title")
 ![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/mockup.pdf?raw=true "Projeto entregador")
@@ -47,9 +44,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
  
 
  ### 5.PMC<br>
- ![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discproint/template_projeto_integrador/blob/main/arquivos/PMC.jpg?raw=true "PMC")
- a) inclusão do PMC desenvolvido pelo grupo
- 
+ ![PMC do projeto](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/PMC.pdf?raw=true "PMC")
  
  ### 6.MODELO CONCEITUAL<br>
     A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
