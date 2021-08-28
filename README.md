@@ -31,8 +31,8 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
  
 
 ### 4 TABELA DE DADOS DO SISTEMA:
- <br> 
-    
+ <br>
+ 
 ![Tabela de dados - Projeto Entregador](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/tabelasdedados.ods?raw=true "Tabela - Projeto Entregador")
 
  
