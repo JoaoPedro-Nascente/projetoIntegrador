@@ -4,7 +4,7 @@ Trabalho desenvolvido durante a disciplina de Banco de Dados do Integrado
 # Sumário
 
 ### 1. COMPONENTES<br>
-Integrantes do grupo<br>
+Integrantes do grupo:<br>
 João Pedro de Oliveira Nascente: joaopedro_nascente@outlook.com<br>
 Enthoni Araújo Fontis Serafim: enthoni.afs@gmail.com<br>
 João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
@@ -21,8 +21,6 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 
 #### 3.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
 > A Projeto Entregador precisa inicialmente dos seguintes relatórios:
 * Relatório que informe quais são os entregadores disponíveis incluindo as seguintes informações: contato do entregador, tipo de contato, status de disponibilidade. 
@@ -33,12 +31,9 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
  
 
 ### 4 TABELA DE DADOS DO SISTEMA:
-    A) Esta tabela deve conter **todos os atributos do sistema** e um mínimo de 10 linhas/registros de dados.
-    B) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
- <br> (veja o exemplo abaixo antes de criar a tabela para seu trabalho)
-    C) Após criada esta tabela não deve ser modificada, pois será comparada com os resultados finais na conclusão do trabalho
+ <br> 
     
-![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discproint/template_projeto_integrador/blob/main/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
+![Tabela de dados - Projeto Entregador](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/tabelasdedados.ods?raw=true "Tabela - Projeto Entregador")
 
  
  
