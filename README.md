@@ -11,7 +11,7 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 ### 2.MINIMUNDO<br>
 
-> O sistema proposto para a disciplina de projeto integrador conterá as informacões sobre entregadores disponíveis para entrega de protudos de lojas(com suas informações) da grande vitoria e informações sobre o proputo juntamente com o cliente(e suas informações). Dos entregadores serão armazenados os contatos e nome. Das lojas serão armazenados o contato, nome, cnpj e o endereço. O cliente terá armazenado o nome, o contato e o endereço. O pedido tera a data que foi feito e o status(entregue ou não). O cliente pode fazer vários pedidos, mas um pedido só tem um cliente. Um cliente pode pedir de várias loja, e uma loja pode ter vários clientes. Um entregador pode ter vários pedidos, e um pedido só tem um entregador. Esse projeto tem como visão abordar somente a grande Vitória.
+> O sistema proposto para a disciplina de projeto integrador conterá as informacões sobre entregadores disponíveis para realizar a entrega de protudos das lojas e microeenpreendedores da Grande Vitória, e  também conterá informações sobre o produto juntamente com o cliente. <br>Do entregador será armazenado o contato e nome. <br>Da loja será armazenado o contato, nome, cnpj e o endereço. <br>O cliente terá armazenado o nome, o contato e o endereço. <br>O pedido terá a data que foi feito e o status(entregue ou não). <br>O cliente pode fazer vários pedidos, mas o pedido só tem um cliente. Um cliente pode pedir de várias lojas, e uma loja pode ter vários clientes. Um entregador pode ter vários pedidos, e um pedido só tem um entregador. Esse projeto tem como visão abordar somente a Grande Vitória.
  
 
 ### 3.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
