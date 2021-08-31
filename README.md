@@ -31,8 +31,8 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
  
 
 ### 4 TABELA DE DADOS DO SISTEMA:
- <br> 
-    
+ <br>
+ 
 ![Tabela de dados - Projeto Entregador](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/tabelasdedados.ods?raw=true "Tabela - Projeto Entregador")
 
  
@@ -41,18 +41,9 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
  ### 5.PMC<br>
  ![PMC do projeto](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/PMC.pdf?raw=true "PMC")
  
- ### 6.MODELO CONCEITUAL<br>
-    A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
-    B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
-        * informe quais são as 3 principais entidades do sistema em densenvolvimento
- <br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
-    C) Principais fluxos de informação/entidades do sistema (mínimo 3). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
-    D) Qualidade e Clareza
-        Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas (Aplicar os conceitos de normalização abordados).   
-        
+ ### 6.MODELO CONCEITUAL<br>        
 ![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.jpg?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.brM?raw=true "Modelo Conceitual")
     
       
     
@@ -65,20 +56,15 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 
 ### 7	MODELO LÓGICO<br>
-        ![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.jpg?raw=true "Modelo Logico")
+![Modelo conceitual](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.jpg?raw=true "Modelo Conceitual")
+![Modelo conceitual](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.brM?raw=true "Modelo Conceitual")
 
 ### 8	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        (criação de tabelas, alterações, etc..) 
+![Modelo Fisico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/fisico.sql?raw=true "Modelo Fisico")
         
        
 ### 9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-        (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados 
- <br> + insert para dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+![Inserts aplicados e restauracao do banco de dados](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/inserts-restauracao.sql?raw=true "Inserts aplicados e restauracao do banco de dados")
 
 
 ### 10	TABELAS E PRINCIPAIS CONSULTAS<br>
