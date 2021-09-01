@@ -42,17 +42,14 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
  ![PMC do projeto](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/PMC.pdf?raw=true "PMC")
  
  ### 6.MODELO CONCEITUAL<br>        
-![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.jpg?raw=true "Modelo Conceitual")
-![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.brM?raw=true "Modelo Conceitual")
+![Modelo conceitual](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.jpg?raw=true "Modelo Conceitual")
+![Modelo conceitual](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.brM?raw=true "Modelo Conceitual")
     
       
     
 #### 6.1 Descrição dos dados 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+
+    Cliente: Tabela que armazena dados do cliente, no caso id, cpf e nome.<br>
 
 
 ### 7	MODELO LÓGICO<br>

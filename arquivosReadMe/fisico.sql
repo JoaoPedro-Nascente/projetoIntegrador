@@ -3,91 +3,51 @@
 
 
 
-CREATE TABLE precoProd (
-dscPrecoLojaProd VARCHAR45,
-idPrecoProd VARCHAR45 PRIMARY KEY,
-idProduto VARCHAR45,
-idLoja VARCHAR45
+CREATE TABLE contato (
+dscContatoLoja VARCHAR(10),
+idTpContato VARCHAR(10),
+idPessoa VARCHAR(10)
 )
 
-CREATE TABLE contatoLoja (
-tpContatoLoja VARCHAR45,
-dscContatoLoja VARCHAR45,
-idContatoLoja VARCHAR45 PRIMARY KEY,
-idLoja VARCHAR45
-)
-
-CREATE TABLE Loja (
-idLoja VARCHAR45 PRIMARY KEY,
-dscCNPJ VARCHAR45,
-dscNomLoja VARCHAR45,
-idEndereco VARCHAR(45)
-)
-
-CREATE TABLE Endereco (
-dscEndereco VARCHAR45,
-idEndereco VARCHAR45 PRIMARY KEY,
-idBairro VARCHAR45
-)
-
-CREATE TABLE Bairro (
-idBairro VARCHAR45 PRIMARY KEY,
-dscBairro VARCHAR45,
-idCidade VARCHAR45
-)
-
-CREATE TABLE Cidade (
-idCidade VARCHAR45 PRIMARY KEY,
-dscCidade VARCHAR45
-)
-
-CREATE TABLE Cliente (
-idCliente VARCHAR45 PRIMARY KEY,
-dscNomCliente VARCHAR45,
-dscCPFCliente VARCHAR45
-)
-
-CREATE TABLE contatoCliente (
-idContatoCliente VARCHAR45 PRIMARY KEY,
-tpContatoLoja VARCHAR45,
-dscContatoLoja VARCHAR45,
-idCliente VARCHAR(45),
-FOREIGN KEY(idCliente) REFERENCES Cliente (idCliente)
-)
-
-CREATE TABLE Entregador (
-dscEntreg VARCHAR45,
-idEntreg VARCHAR45 PRIMARY KEY,
-cellEntreg VARCHAR45
-)
-
-CREATE TABLE contatoEntregador (
-idContatoEntregador VARCHAR45 PRIMARY KEY,
-dscContatoEntregador VARCHAR45,
-tpContatoEntregador VARCHAR45,
-idEntreg VARCHAR45,
-FOREIGN KEY(idEntreg) REFERENCES Entregador (idEntreg)
+CREATE TABLE tpContato (
+idTpContato VARCHAR(10) PRIMARY KEY,
+dscTpContato VARCHAR(10)
 )
 
 CREATE TABLE Produto (
-idProduto VARCHAR45 PRIMARY KEY,
-tpProduto VARCHAR45,
-dscProduto VARCHAR45
+idProduto VARCHAR(10) PRIMARY KEY,
+tpProduto VARCHAR(10),
+dscProduto VARCHAR(10)
 )
 
-CREATE TABLE Pedidos (
-idPedidos VARCHAR45 PRIMARY KEY,
-dataPedido VARCHAR45,
-dscSttsPedidos VARCHAR45,
-idCliente VARCHAR45,
-idEntreg VARCHAR45,
-FOREIGN KEY(idCliente) REFERENCES Cliente (idCliente),
-FOREIGN KEY(idEntreg) REFERENCES Entregador (idEntreg)
+CREATE TABLE catalogo (
+idCatalogo VARCHAR(10) PRIMARY KEY,
+dscPrecoCatalogo VARCHAR(10),
+idProduto VARCHAR(10),
+idPessoa VARCHAR(10),
+FOREIGN KEY(idProduto) REFERENCES Produto (idProduto)
 )
 
-ALTER TABLE precoProd ADD FOREIGN KEY(idProduto) REFERENCES Produto (idProduto)
-ALTER TABLE precoProd ADD FOREIGN KEY(idLoja) REFERENCES Loja (idLoja)
-ALTER TABLE contatoLoja ADD FOREIGN KEY(idLoja) REFERENCES Loja (idLoja)
-ALTER TABLE Loja ADD FOREIGN KEY(idEndereco) REFERENCES Endereco (idEndereco)
-ALTER TABLE Endereco ADD FOREIGN KEY(idBairro) REFERENCES Bairro (idBairro)
-ALTER TABLE Bairro ADD FOREIGN KEY(idCidade) REFERENCES Cidade (idCidade)
+CREATE TABLE Pessoa (
+dscNomPessoa VARCHAR(10),
+idPessoa VARCHAR(10) PRIMARY KEY,
+endereco VARCHAR(10)
+)
+
+CREATE TABLE pedido (
+idPedido VARCHAR(10) PRIMARY KEY,
+idPessoa VARCHAR(10),
+FOREIGN KEY(idPessoa) REFERENCES Pessoa (idPessoa)
+)
+
+CREATE TABLE itensVendidos (
+dscQtd VARCHAR(10),
+idCatalogo VARCHAR(10),
+idPedido VARCHAR(10),
+FOREIGN KEY(idCatalogo) REFERENCES catalogo (idCatalogo),
+FOREIGN KEY(idPedido) REFERENCES pedido (idPedido)
+)
+
+ALTER TABLE contato ADD FOREIGN KEY(idTpContato) REFERENCES tpContato (idTpContato)
+ALTER TABLE contato ADD FOREIGN KEY(idPessoa) REFERENCES Pessoa (idPessoa)
+ALTER TABLE catalogo ADD FOREIGN KEY(idPessoa) REFERENCES Pessoa (idPessoa)
