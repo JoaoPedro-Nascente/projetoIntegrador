@@ -54,6 +54,7 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 ### 7	MODELO LÓGICO<br>
 ![Modelo Logico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.jpg?raw=true "Modelo Logico")
+![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.brM?raw=true "Modelo Logico")
 
 ### 8	MODELO FÍSICO<br>
 ![Modelo Fisico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/fisico.jpg?raw=true "Modelo Fisico")
