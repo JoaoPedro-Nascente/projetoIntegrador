@@ -11,7 +11,7 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 ### 2.MINIMUNDO<br>
 
-> O sistema proposto para a disciplina de projeto integrador conterá as informacões sobre entregadores disponíveis para entrega de protudos de lojas(com suas informações) da grande vitoria e informações sobre o proputo juntamente com o cliente(e suas informações). Dos entregadores serão armazenados os contatos e nome. Das lojas serão armazenados o contato, nome, cnpj e o endereço. O cliente terá armazenado o nome, o contato e o endereço. O pedido tera a data que foi feito e o status(entregue ou não). O cliente pode fazer vários pedidos, mas um pedido só tem um cliente. Um cliente pode pedir de várias loja, e uma loja pode ter vários clientes. Um entregador pode ter vários pedidos, e um pedido só tem um entregador. Esse projeto tem como visão abordar somente a grande Vitória.
+> O sistema proposto para a disciplina de projeto integrador conterá as informacões sobre entregadores disponíveis para realizar a entrega de protudos das lojas e microeenpreendedores da Grande Vitória, e  também conterá informações sobre o produto juntamente com o cliente. Do entregador será armazenado o contato e nome. Da loja será armazenado o contato, nome, cnpj e o endereço. O cliente terá armazenado o nome, o contato e o endereço. O pedido terá a data que foi feito e o status(entregue ou não). O cliente pode fazer vários pedidos, mas o pedido só tem um cliente. Um cliente pode pedir de várias lojas, e uma loja pode ter vários clientes. Um entregador pode ter vários pedidos, e um pedido só tem um entregador. Esse projeto tem como visão abordar somente a Grande Vitória.
  
 
 ### 3.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
@@ -31,8 +31,8 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
  
 
 ### 4 TABELA DE DADOS DO SISTEMA:
- <br>
- 
+ <br> 
+    
 ![Tabela de dados - Projeto Entregador](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/tabelasdedados.ods?raw=true "Tabela - Projeto Entregador")
 
  
@@ -53,15 +53,20 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 
 ### 7	MODELO LÓGICO<br>
-![Modelo conceitual](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.jpg?raw=true "Modelo Conceitual")
-![Modelo conceitual](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.brM?raw=true "Modelo Conceitual")
+        ![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.jpg?raw=true "Modelo Logico")
 
 ### 8	MODELO FÍSICO<br>
-![Modelo Fisico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/fisico.sql?raw=true "Modelo Fisico")
+        a) inclusão das instruções de criacão das estruturas em SQL/DDL 
+        (criação de tabelas, alterações, etc..) 
         
        
 ### 9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-![Inserts aplicados e restauracao do banco de dados](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/inserts-restauracao.sql?raw=true "Inserts aplicados e restauracao do banco de dados")
+        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
+        (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados 
+ <br> + insert para dados a serem inseridos)
+        b) Criar um novo banco de dados para testar a restauracao 
+        (em caso de falha na restauração o grupo não pontuará neste quesito)
+        c) formato .SQL
 
 
 ### 10	TABELAS E PRINCIPAIS CONSULTAS<br>
