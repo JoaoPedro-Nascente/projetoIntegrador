@@ -53,12 +53,10 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 
 ### 7	MODELO LÓGICO<br>
-        ![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.jpg?raw=true "Modelo Logico")
+![Modelo Logico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.jpg?raw=true "Modelo Logico")
 
 ### 8	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        (criação de tabelas, alterações, etc..) 
-        
+![Modelo Fisico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/fisico.jpg?raw=true "Modelo Fisico")
        
 ### 9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
