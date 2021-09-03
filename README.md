@@ -57,7 +57,6 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 ![Modelo Logico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.brM?raw=true "Modelo Logico")
 
 ### 8	MODELO FÍSICO<br>
-![Modelo Fisico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/fisico.jpg?raw=true "Modelo Fisico")
 ![Modelo Fisico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/fisico.sql?raw=true "Modelo Fisico")
        
 ### 9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
