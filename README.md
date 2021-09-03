@@ -54,18 +54,14 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 ### 7	MODELO LÓGICO<br>
 ![Modelo Logico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.jpg?raw=true "Modelo Logico")
-![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.brM?raw=true "Modelo Logico")
+![Modelo Logico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.brM?raw=true "Modelo Logico")
 
 ### 8	MODELO FÍSICO<br>
 ![Modelo Fisico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/fisico.jpg?raw=true "Modelo Fisico")
+![Modelo Fisico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/fisico.sql?raw=true "Modelo Fisico")
        
 ### 9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-        (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados 
- <br> + insert para dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+![Restauração e inserts no banco de dados](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/restauracao-inserts.sql?raw=true "Restauração e inserts no banco de dados")
 
 
 ### 10	TABELAS E PRINCIPAIS CONSULTAS<br>
