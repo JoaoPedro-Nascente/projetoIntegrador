@@ -142,7 +142,7 @@ Resultado:
 <br>
  
  ### 11 Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
-![Relatórios](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/relatorios.ipnynb?raw=true "Relatórios")
+![Relatórios](https://colab.research.google.com/drive/1BSIIpcw3WcEQQodNQwVEQmlYOUx09Gcn?usp=sharing "Relatórios")
  <br>
  
  ### 12 Slides e Apresentação em vídeo. <br>
