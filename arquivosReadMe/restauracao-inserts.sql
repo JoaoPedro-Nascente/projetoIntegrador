@@ -50,7 +50,7 @@ drop table if exists mydb.catalogo;
 
 create table if not exists mydb.catalogo (
 	idCatalogo INT not null,
-	dscPrecoCatalogo DECIMAL not null,
+	dscPrecoCatalogo MONEY not null,
 	produto_idProduto INT not null,
 	pessoa_idPessoa INT not null,
 	primary key (idCatalogo),
@@ -192,17 +192,17 @@ COMMIT;
 
 START TRANSACTION;
 SET SCHEMA 'mydb';
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('1450.0', 1, 1, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('1200.0', 2, 3, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('150.0', 3, 6, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('3240.0', 4, 15, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('350.0', 5, 16, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('50.0', 6, 7, 15);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('150.0', 7, 8, 14);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('80.0', 8, 19, 14);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('60.0', 9, 9, 12);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('100.0', 10, 18, 12);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('3250.0', 11, 17, 13);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('1450', 1, 1, 11);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('1200', 2, 3, 11);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('150', 3, 6, 11);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('3240', 4, 15, 11);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('350', 5, 16, 11);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('50', 6, 7, 15);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('150', 7, 8, 14);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('80', 8, 19, 14);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('60', 9, 9, 12);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('100', 10, 18, 12);
+INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('3250', 11, 17, 13);
 
 COMMIT;
 

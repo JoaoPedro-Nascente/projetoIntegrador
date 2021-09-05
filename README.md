@@ -16,18 +16,18 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 ### 3.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
-![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/mockuppic.png?raw=true "Title")
-![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/mockup.pdf?raw=true "Projeto entregador")
+![Alt text](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/mockuppic.png?raw=true "Title")
+![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/mockup.pdf?raw=true "Projeto entregador")
 
 
 #### 3.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     
 > A Projeto Entregador precisa inicialmente dos seguintes relatórios:
-* Relatório que informe quais são os entregadores disponíveis incluindo as seguintes informações: contato do entregador, tipo de contato, status de disponibilidade. 
-* Relatório de pedidos entregues contendo as seguintes informações: dsc do entregador, dsc do cliente,  dsc da loja, número do pedido, dsc do produto , status do pedido e data do pedido.  
-* Relatório dos ganhos do entregador incluindo as seguintes informações: qtd de entregas realizadas pelo entregador, resultado do valor de uma entrega por todas feitas.  
-* Relatório de pedidos em andamentos incluindo as seguintes informações: descrição do status do entregador, numero do pedido.
-* Relatório de lojas cadastradas incluindo as seguintes informações: nome da loja, cnpj da loja e o endereço da loja.
+* Relatório de lojas cadastradas, incluindo as seguintes informações: nome da loja e o endereço da loja.
+* Relatório que informe quais as lojas que mais venderam e quanto cada uma vendeu. 
+* Objetivo: Relatório dos produtos que mais venderam e quanto cada um vendeu com o seu respectivo nome.
+* Objetivo: Relatório dos clientes que mais compraram e quanto cada um comprou, com seu nome e endereço.
+* Objetivo: Relatório com as categorias de produtos mais requisitadas e quanto venderam.
  
 
 ### 4 TABELA DE DADOS DO SISTEMA:
@@ -39,21 +39,27 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
  
 
  ### 5.PMC<br>
- ![PMC do projeto](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/PMC.pdf?raw=true "PMC")
+ ![PMC do projeto](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/PMC.pdf?raw=true "PMC")
  
  ### 6.MODELO CONCEITUAL<br>        
-![Modelo conceitual](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.jpg?raw=true "Modelo Conceitual")
+![Modelo conceitual](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/conceitual.jpg?raw=true "Modelo Conceitual")
 ![Modelo conceitual](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/conceitual.brM?raw=true "Modelo Conceitual")
     
       
     
 #### 6.1 Descrição dos dados 
 
-    Cliente: Tabela que armazena dados do cliente, no caso id, cpf e nome.<br>
+    Pessoa: Tabela que armazena dados das pessoas cadastradas, no caso id, nome e endereço.<br>
+    TpContato: Tabela com os tipos de forma de contato do sistema e seus id's.<br>
+    Contato: Tabela com os contatos dos usuários, podendo ser mais de 1, os tipos de contato e seus id's.<br>
+    Produto: Tabela com as id's dos produtos, nome e categoria na qual se encaixa.<br>
+    Catalogo: Tabela que relaciona os id's dos produtos com os id's dos usuários que os vendem e o seu respectivo preço.<br>
+    Pedido: Tabela com os id's dos pedidos realizados e os clientes que os realizaram.<br>
+    Itensvendidos: Tabela que relaciona os itens que foram pedidos aos seus respectivos pedidos.<br>
 
 
 ### 7	MODELO LÓGICO<br>
-![Modelo Logico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.jpg?raw=true "Modelo Logico")
+![Modelo Logico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/logico.jpg?raw=true "Modelo Logico")
 ![Modelo Logico](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/logico.brM?raw=true "Modelo Logico")
 
 ### 8	MODELO FÍSICO<br>
@@ -66,21 +72,77 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 ### 10	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 10.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+
+*Pessoa
+>SELECT * FROM mydb.pessoa
+![Tabela pessoa](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/pessoa.png?raw=true "Tabela pessoa")
+<br>
+
+*tpContato
+>SELECT * FROM mydb.tpcontato
+![Tabela tpcontato](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/tpcontato.png?raw=true "Tabela tpcontato")
+<br>
+
+*Contato
+>SELECT * FROM mydb.contato
+![Tabela contato parte 1](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/contato1.png?raw=true "Tabela contato parte 1")
+![Tabela contato parte 2](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/contato2.png?raw=true "Tabela contato 2")
+<br>
+
+*Produto
+>SELECT * FROM mydb.produto
+![Tabela produto](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/produto.png?raw=true "Tabela produto")
+<br>
+
+*Catalogo
+>SELECT * FROM mydb.catalogo
+![Tabela catalogo](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/catalogo.png?raw=true "Tabela catalogo")
+<br>
+
+*Pedido
+>SELECT * FROM mydb.pedido
+![Tabela pedido](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/pedido.png?raw=true "Tabela pedido")
+<br>
+
+*ItensVendidos
+>SELECT * FROM mydb.itensvendidos
+![Tabela itensvendidos](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/itensvendidos.png?raw=true "Tabela itensvendidos")
+<br>
+
 #### 10.2 PRINCIPAIS CONSULTAS DO SISTEMA 
- Inserir as principais consultas (relativas aos 5 principais relatórios) definidas previamente no iten 3.1 deste template.
+
+*Relatório de lojas cadastradas incluindo as seguintes informações: nome da loja e o endereço da loja.
+>SELECT pessoa.idpessoa, pessoa.dscnompessoa, pessoa.endereco FROM mydb.pessoa INNER JOIN mydb.catalogo ON(pessoa.idpessoa = catalogo.pessoa_idpessoa) GROUP BY pessoa.idpessoa
+Resultado:
+![Relatoóio gerado](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/relatorio1.png?raw=true "Relatório gerado")
  <br>
-  a) Você deve apresentar as consultas em formato SQL para cad um dos relatórios.
+
+*Relatório que informe quais as lojas que mais venderam e quanto cada uma vendeu.
+>SELECT pessoa.idpessoa, pessoa.dscnompessoa, SUM(itensvendidos.dscqtd) as TotalVendas FROM mydb.pessoa INNER JOIN mydb.catalogo ON(pessoa.idpessoa = catalogo.pessoa_idpessoa) INNER JOIN mydb.itensvendidos ON(catalogo.idcatalogo = itensvendidos.catalogo_idcatalogo) GROUP BY pessoa.idpessoa ORDER BY SUM(itensvendidos.dscqtd) DESC
+Resultado:
+![Relatoóio gerado](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/relatorio2.png?raw=true "Relatório gerado")
  <br>
-  b) Além da consulta deve ser apresentada uma imagem com o resultado obtido para cada consulta.
+
+*Relatório dos produtos que mais venderam e quanto cada um vendeu com o seu respectivo nome.
+>SELECT produto.dscproduto, SUM(itensvendidos.dscqtd) AS TotalVendas FROM mydb.produto INNER JOIN mydb.catalogo ON(produto.idproduto = catalogo.produto_idproduto) INNER JOIN mydb.itensvendidos ON(itensvendidos.catalogo_idcatalogo = catalogo.idcatalogo) GROUP BY produto.idproduto ORDER BY SUM(itensvendidos.dscqtd) DESC
+Resultado:
+![Relatoóio gerado](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/relatorio3.png?raw=true "Relatório gerado")
+<br>
+
+*Relatório dos clientes que mais compraram e quanto cada um comprou, com seu nome e endereço.
+>SELECT pessoa.dscnompessoa, pessoa.endereco, SUM(itensvendidos.dscqtd) FROM mydb.pessoa INNER JOIN mydb.pedido ON(pedido.pessoa_idpessoa = pessoa.idpessoa) INNER JOIN mydb.itensvendidos ON(itensvendidos.pedido_idpedido = pedido.idpedido) GROUP BY pessoa.idpessoa ORDER BY SUM(itensvendidos.dscqtd) DESC
+Resultado:
+![Relatoóio gerado](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/relatorio4.png?raw=true "Relatório gerado")
  <br>
- <br>
+
+*Relatório com as categorias de produtos mais requisitadas e quanto venderam.
+>SELECT produto.tpproduto, SUM(itensvendidos.dscqtd) AS totalvendido FROM mydb.produto INNER JOIN mydb.catalogo ON(produto.idproduto = catalogo.produto_idproduto) INNER JOIN mydb.itensvendidos ON(itensvendidos.catalogo_idcatalogo = catalogo.idcatalogo) GROUP BY produto.tpproduto ORDER BY SUM(itensvendidos.dscqtd) DESC
+Resultado:
+![Relatoóio gerado](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/imagens/relatorio5.png?raw=true "Relatório gerado")
+<br>
  
  ### 11 Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
-     OBS: Observe as instruções relacionadas a cada uma das atividades abaixo.<br>
- #### 11.1	Integração com Linguagem de programação; <br>
- #### 11.2	Desenvolvimento de gráficos/relatórios pertinentes, juntamente com demais <br>
- #### solicitações feitas pelo professor. <br>
- <br>
+![Relatórios](https://github.com/JoaoPedro-Nascente/projetoIntegrador/blob/main/arquivosReadMe/relatorios.ipnynb?raw=true "Relatórios")
  <br>
  
  ### 12 Slides e Apresentação em vídeo. <br>
