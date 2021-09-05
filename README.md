@@ -142,7 +142,7 @@ Resultado:
 <br>
  
  ### 11 Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
-![Relatórios](https://colab.research.google.com/drive/1BSIIpcw3WcEQQodNQwVEQmlYOUx09Gcn?usp=sharing?raw=true "Relatórios")
+<a href="https://colab.research.google.com/drive/1BSIIpcw3WcEQQodNQwVEQmlYOUx09Gcn?usp=sharing" target="_blank">Relatórios</a>
  <br>
  
  ### 12 Slides e Apresentação em vídeo. <br>
