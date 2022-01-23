@@ -11,7 +11,7 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
 
 ### 2.MINIMUNDO<br>
 
-> O sistema proposto para a disciplina de projeto integrador conterá as informacões sobre entregadores disponíveis para realizar a entrega de protudos das lojas e microeenpreendedores da Grande Vitória, e  também conterá informações sobre o produto juntamente com o cliente. Do entregador será armazenado o contato e nome. Da loja será armazenado o contato, nome, cnpj e o endereço. O cliente terá armazenado o nome, o contato e o endereço. O pedido terá a data que foi feito e o status(entregue ou não). O cliente pode fazer vários pedidos, mas o pedido só tem um cliente. Um cliente pode pedir de várias lojas, e uma loja pode ter vários clientes. Um entregador pode ter vários pedidos, e um pedido só tem um entregador. Esse projeto tem como visão abordar somente a Grande Vitória.
+> O sistema proposto para a disciplina de projeto integrador conterá as informações sobre entregadores disponíveis para realizar fretes na Grande Vitória, e também contém informações sobre o cliente que deseja o frete. Do entregador será armazenado o contato e nome o tipo de veículo, quantos fretes realizou e onde entregou. O cliente terá armazenado o nome, o contato e a descrição de seu pedido de frete. O pedido terá um dado que foi feito e de forma que se encaixe com os freteiros será selecionado aqueles que mais se encaixam com o desejado. O cliente pode fazer um pedido de frete, que terá somente um entregador. Um entregador pode ter vários pedidos, e um pedido só tem um entregador. Esse projeto tem como visão abordar somente a Grande Vitória.
  
 
 ### 3.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
@@ -49,8 +49,8 @@ João Pedro Ribeiro Silva: johncod3fla@gmail.com<br>
     
 #### 6.1 Descrição dos dados 
 
-    Pessoa: Tabela que armazena dados das pessoas cadastradas, no caso id, nome e endereço.<br>
-    TpContato: Tabela com os tipos de forma de contato do sistema e seus id's.<br>
+    Usuário: Tabela que armazena dados das pessoas cadastradas, no caso id, nome, senha, email, identificação e nome de usuário.<br>
+    TpVeiculo: Tabela com os tipos de veículos e seus id's.<br>
     Contato: Tabela com os contatos dos usuários, podendo ser mais de 1, os tipos de contato e seus id's.<br>
     Produto: Tabela com as id's dos produtos, nome e categoria na qual se encaixa.<br>
     Catalogo: Tabela que relaciona os id's dos produtos com os id's dos usuários que os vendem e o seu respectivo preço.<br>

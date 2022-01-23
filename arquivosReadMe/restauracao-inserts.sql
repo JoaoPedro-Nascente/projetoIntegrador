@@ -4,217 +4,83 @@ DROP SCHEMA IF EXISTS mydb CASCADE;
 CREATE SCHEMA IF NOT EXISTS mydb;
 SET SCHEMA 'mydb' ;
 
-DROP TABLE IF EXISTS mydb.pessoa ;
+DROP TABLE IF EXISTS mydb.usuario ;
 
-CREATE TABLE IF NOT EXISTS mydb.pessoa (
-  idPessoa INT NOT NULL,
-  dscNomPessoa VARCHAR(50) NOT NULL,
-  endereco VARCHAR(50),
-  PRIMARY KEY (idPessoa)
+CREATE TABLE IF NOT EXISTS mydb.usuario (
+  idUsuario INT NOT NULL,
+  dscNomeUsuario VARCHAR(50) NOT NULL,
+  dscEmailUsuario VARCHAR(50) NOT NULL,
+  dscSenhaUsuario VARCHAR(50) NOT NULL,
+  dscIdentificacaoUsuario VARCHAR(20) NOT NULL,
+  dscUsuario VARCHAR(500) NULL,
+  dscTelUsuario VARCHAR(15) NULL,
+  dscAreaAtuacao VARCHAR(50) NULL,
+  PRIMARY KEY (idUsuario)
  );
 
 
-DROP TABLE IF EXISTS mydb.tpcontato ;
+DROP TABLE IF EXISTS mydb.categoriaVeiculo ;
 
-CREATE TABLE IF NOT EXISTS mydb.tpcontato (
-  idTpContato INT NOT NULL,
-  dscTpContato VARCHAR(50) NOT NULL,
-  PRIMARY KEY (idTpContato))
-;
-
-
-DROP TABLE IF EXISTS mydb.contato ;
-
-CREATE TABLE IF NOT EXISTS mydb.contato (
-  dscContato VARCHAR(50) NOT NULL,
-  pessoa_idPessoa INT NOT NULL,
-  tpcontato_idTpContato INT NOT NULL,
-  FOREIGN KEY (pessoa_idPessoa)
-    REFERENCES mydb.pessoa (idPessoa),
-  foreign key (tpcontato_idTpContato)
-    references mydb.tpcontato (idTpContato)
+CREATE TABLE IF NOT EXISTS mydb.categoriaVeiculo (
+  idCategoriaVeiculo INT NOT NULL,
+  dscCategoriaVeiculo VARCHAR(50) NOT NULL,
+  PRIMARY KEY (idCategoriaVeiculo)
 );
 
 
-drop table if exists mydb.produto;
-
-create table if not exists mydb.produto (
-	idProduto INT not null,
-	tpProduto VARCHAR(50) not null,
-	dscProduto VARCHAR(50) not null,
-	primary key (idProduto)
-);
-
-
-drop table if exists mydb.catalogo;
-
-create table if not exists mydb.catalogo (
-	idCatalogo INT not null,
-	dscPrecoCatalogo MONEY not null,
-	produto_idProduto INT not null,
-	pessoa_idPessoa INT not null,
-	primary key (idCatalogo),
-	foreign key (produto_idProduto)
-		references mydb.produto (idProduto),
-	foreign key (pessoa_idPessoa)
-		references mydb.pessoa (idPessoa)
-);
-
-
-drop table if exists mydb.pedido;
-
-create table if not exists mydb.pedido(
-	idPedido INT not null,
-	pessoa_idPessoa INT not null,
-	primary key (idPedido),
-	foreign key (pessoa_idPessoa)
-		references mydb.pessoa (idPessoa)
-);
-
-
-drop table if exists mydb.itensvendidos;
-
-create table if not exists mydb.itensvendidos(
-	dscQtd INT not null,
-	catalogo_idCatalogo INT not null,
-	pedido_idPedido INT not null,
-	foreign key (catalogo_idCatalogo)
-		references mydb.catalogo (idCatalogo),
-	foreign key (pedido_idPedido)
-		references mydb.pedido (idPedido)
+DROP TABLE IF EXISTS mydb.veiculo;
+CREATE TABLE IF NOT EXISTS mydb.veiculo (
+  idVeiculo INT NOT NULL,
+  dscVeiculo VARCHAR(50) NOT NULL,
+  usuario_idUsuario INT NOT NULL,
+  categoriaVeiculo_idCategoriaVeiculo INT NOT NULL,
+  PRIMARY KEY (idVeiculo),
+  FOREIGN KEY (usuario_idUsuario)
+    REFERENCES mydb.usuario (idUsuario),
+  FOREIGN KEY (categoriaVeiculo_idCategoriaVeiculo)
+    REFERENCES mydb.categoriaVeiculo (idCategoriaVeiculo)
 );
 
 
 START TRANSACTION;
 SET SCHEMA 'mydb';
-INSERT INTO mydb.tpcontato (idTpContato, dscTpContato) VALUES (1, 'email');
-INSERT INTO mydb.tpcontato (idTpContato, dscTpContato) VALUES (2, 'instagram');
-INSERT INTO mydb.tpcontato (idTpContato, dscTpContato) VALUES (3, 'celular');
-INSERT INTO mydb.tpcontato (idTpContato, dscTpContato) VALUES (4, 'facebook');
-INSERT INTO mydb.tpcontato (idTpContato, dscTpContato) VALUES (5, 'twitter');
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (1, 'Leonardo', 'leo@gmail.com', 'batatafrita123', '138.361.557-88', null, null, null);
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (2, 'Adilson', 'adilsinho@gmail.com', 'gatodebotas', '112.141.777-94', null, null, null);
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (3, 'Adriana', 'adriana@hotmail.com', 'MYpssw', '084.098.587-89', null, null, null);
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (4, 'Paty Sampaio', 'patyzinha@hotmail.com', 'patypssw123', '128.776.547-53', null, null, null);
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (5, 'Mariana', 'marimari@gmail.com', 'PHiJEaTibleV', '97.638.079/0001-12', null, null, null);
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (6, 'Andressa', 'dressa@gmail.com', 'FasHIONweek', '638.352.431-60', null, null, null);
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (7, 'Erick', 'erick@gmail.com', 'SkiNCAREPss', '195.340.924-09', null, null, null);
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (8, 'Beatriz', 'bea@gmail.com', 'tricoDAvovoP', '717.386.987-08', null, null, null);
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (9, 'Carlos', 'carlos.emanuel@hotmail.com', 'senha', '560.566.520-09', 'Ol√°, tenho um caminh√£o grande e fa√ßo transporte de cargas pesadas a partir de 20 toneladas, e tamb√©m fa√ßo viagens at√© 30 Km, valor a combinar.', '27667670098', 'Grande Vit√≥ria');
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (10, 'Amanda', 'amandinha@gmail.com', 'amandinhag4tinh4_25', '970.693.050-79', 'Ol√°, fa√ßo viagens de pequena dist√¢ncia e carrego cargas de at√© 650kg e dist√¢ncia at√© 15 Km.', '27988875033', 'Guarapari');
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (11, 'Marcos Fion', 'marcos.fion@hotmail.com', 'marcos19999', '297.459.300-32', 'Ol√°, fa√ßo transporte de cargas leves com at√© 6 toneladas com dist√¢ncia at√© 25 Km.', '27988875033', 'Grande Vit√≥ria');
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (12, 'Bino e Tonh√£o', 'antonioconceicao@gmail.com', 'binoetonhao_cargas', '202.813.240-00', 'Ol√°, somos amigos de inf√¢ncia e realizos viagens com cargas de m√©dio porte, com peso at√© 10 toneladas e dist√¢ncia at√© 30 Km.', '27996749798', 'Grande Vit√≥ria');
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (13, 'Sebasti√£o', 'seu.tiao@gmail.com', '28021976', '157.996.750-70', 'Ol√°, possuo um camin√£o m√©dio, e carrego cargas at√© 13 toneladas, a dist√¢ncia m√°xima que fa√ßo por viagem √© 10 Km.', '27893679987', 'Cariacica');
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (14, 'Jorge Caeta', 'jorgecaetaofc@outlook.com', 'jorjaodaM4a554', '114.012.150-25', 'Fa√ßo entregas de cargas leves, com peso at√© 7 toneladas e viagens at√© 20 Km de dist√¢cia.', '27999879098', 'Serra');
+INSERT INTO mydb.usuario (idUsuario, dscNomeUsuario, dscEmailUsuario, dscSenhaUsuario, dscIdentificacaoUsuario, dscUsuario, dscTelUsuario, dscAreaAtuacao) VALUES (15, 'Barbara e Claudio', 'barbaraMiranda@outlook.com', 'barbaraeclaudio12051994', '712.439.600-00', 'Realizamos tranporte de cargas leves, com peso at√© 5 toneladas, e dist√¢ncia at√© 13 Km.', '27667670098', 'Vit√≥ria');
 
 COMMIT;
 
 
 START TRANSACTION;
 SET SCHEMA 'mydb';
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (1, 'Rua S„o Jo„o - 22', 'Mario Luiz');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (2, 'Rua dos LÌrios - 228', 'Paulo Andre');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (3, 'Avenida Ho Shi Min - 117', 'Gabriel Felix');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (4, 'Rua Professor Fisicando - 001', 'Larissa Bonomo');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (5, 'Vale da Praia - 225', 'Julia Gomes');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (6, 'Rua Aurora - 507', 'Jeremias Oliveira');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (7, 'Rua Esmeria Barros Deorce - 285', 'Ana Carolina');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (8, 'Rua das Flores - 911', 'Beatriz Clark');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (9, 'Avenida JosÈ Paulo da Costa - 718', 'Lais Silva');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (10, 'Avenida Professor Costa Gomes - 34', 'Eryc Pereira');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (11, 'Avenida Professor Herminio Blackman - 225', 'Game Over');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (12, 'Rua dos Laranjais - 1008', 'LÛtus');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (13, 'Avenida Bento Brigadeiro - 208', 'Elegance');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (14, 'Avenida Cristiano Ronaldo - 2222', 'Q Beleza');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (15, 'Avenida Neymar Junior - 2022', 'Belo Tricot');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (16, 'Alameda Carmen Rosa da Fonseca - 515', 'Jo„o Pedro');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (17, 'Travessa da Macieira - 489', 'Daniel Silva');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (18, 'Rua M·rio Pires - 171', 'Pedro Augusto');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (19, 'Travessa IndependÍncia - 175', 'Mariana Ortelan');
-INSERT INTO mydb.pessoa (idPessoa, endereco, dscNomPessoa) VALUES (20, 'Rua Recife - 225', 'Sara Stein');
+INSERT INTO mydb.categoriaVeiculo (idCategoriaVeiculo, dscCategoriaVeiculo) VALUES (1, 'Frete dom√©stico');
+INSERT INTO mydb.categoriaVeiculo (idCategoriaVeiculo, dscCategoriaVeiculo) VALUES (2, 'Carga leve');
+INSERT INTO mydb.categoriaVeiculo (idCategoriaVeiculo, dscCategoriaVeiculo) VALUES (3, 'Carga m√©dia');
+INSERT INTO mydb.categoriaVeiculo (idCategoriaVeiculo, dscCategoriaVeiculo) VALUES (4, 'Carga pesada');
 
 COMMIT;
 
 
 START TRANSACTION;
 SET SCHEMA 'mydb';
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('jp@gmail.com', 1, 16);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('27 998159961', 3, 1);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('dani@gmail.com', 1, 17);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('27 990663901', 3, 11);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('27 903847909', 3, 7);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('sarahstein@gmai.com', 1, 20);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('@elegancefashion', 2, 13);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('lojagameover@gmail.com', 1, 11);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('27 929934078', 3, 2);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('lotusroupas@hotmail.com', 1, 12);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('27 963126142', 3, 4);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('27 971336910', 3, 8);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('belezacosmeticos@gmail.com', 1, 14);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('27 948961432', 3, 3);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('belotricot@hotmail.com', 1, 15);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('27 910770327', 3, 9);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('Sarah Stein', 4, 20);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('@lotusRoupas', 2, 12);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('@beloTricot', 2, 15);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('marioLuiz123', 5, 1);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('biazinhaGatinha5557', 5, 8);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('Gabriel Felix', 4, 3);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('jullye556', 5, 5);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('Jeremias Oliveira Neto', 4, 6);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('hjTemGolDo_ribamar', 5, 10);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('jaum_oBrabo', 2, 16);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('daniel_silva', 2, 18);
-INSERT INTO mydb.contato (dscContato, tpcontato_idTpContato, pessoa_idPessoa) VALUES ('Mariana Ortelan', 5, 19);
-
-COMMIT;
-
-
-START TRANSACTION;
-SET SCHEMA 'mydb';
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (1, 'Playstation 4', 'Console de Videogame');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (2, 'Fog„o Dako 4 bocas', 'EletrodomÈstico');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (3, 'Televis„o Sony 50', 'EletrÙnico');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (4, 'Jogo de cadeiras de madeira', 'MÛvel');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (5, 'Jogo God Of War PS4', 'Jogo EletrÙnico');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (6, 'Caneca decorada', 'Casa e decoraÁ„o');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (7, 'Estojo de maquiagem', 'Moda e beleza');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (8, 'Camisa Polo', 'Moda e beleza');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (9, 'Mesa de madeira maciÁa', 'MÛvel');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (10, 'Motorola G8', 'EletrÙnico');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (11, 'Lixeira para cozinha', 'Casa e decoraÁ„o');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (12, 'Torneira', 'Casa e decoraÁ„o');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (13, 'Bicicleta aro 16 infantil', 'Brinquedos');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (14, 'Notebook Samsung Book X40', 'EletrÙnico');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (15, 'Mouse Gfallen', 'EletrÙnico');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (16, 'Anel de ouro com diamantes', 'Joias e bijuterias');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (17, 'Vestido longo', 'Moda e beleza');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (18, 'Perfume Obotic·rio', 'Perfumaria');
-INSERT INTO mydb.produto (idProduto, dscProduto, tpProduto) VALUES (19, 'CalÁas Jeans', 'Moda e beleza');
-insert into mydb.produto (idProduto, dscProduto, tpProduto) values (20, 'Terno', 'Moda e beleza');
-
-COMMIT;
-
-
-START TRANSACTION;
-SET SCHEMA 'mydb';
-INSERT INTO mydb.pedido (idPedido, pessoa_idPessoa) VALUES (1, 1);
-INSERT INTO mydb.pedido (idPedido, pessoa_idPessoa) VALUES (2, 3);
-INSERT INTO mydb.pedido (idPedido, pessoa_idPessoa) VALUES (3, 2);
-INSERT INTO mydb.pedido (idPedido, pessoa_idPessoa) VALUES (4, 5);
-COMMIT;
-
-START TRANSACTION;
-SET SCHEMA 'mydb';
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('1450', 1, 1, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('1200', 2, 3, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('150', 3, 6, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('3240', 4, 15, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('350', 5, 16, 11);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('50', 6, 7, 15);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('150', 7, 8, 14);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('80', 8, 19, 14);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('60', 9, 9, 12);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('100', 10, 18, 12);
-INSERT INTO mydb.catalogo (dscPrecoCatalogo, idCatalogo, produto_idProduto, pessoa_idPessoa) VALUES ('3250', 11, 17, 13);
-
-COMMIT;
-
-
-START TRANSACTION;
-SET SCHEMA 'mydb';
-INSERT INTO mydb.itensvendidos (dscQtd, catalogo_idCatalogo, pedido_idPedido) VALUES (1, 1, 1);
-INSERT INTO mydb.itensvendidos (dscQtd, catalogo_idCatalogo, pedido_idPedido) VALUES (2, 2, 1);
-INSERT INTO mydb.itensvendidos (dscQtd, catalogo_idCatalogo, pedido_idPedido) VALUES (1, 3, 1);
-INSERT INTO mydb.itensvendidos (dscQtd, catalogo_idCatalogo, pedido_idPedido) VALUES (1, 11, 2);
-INSERT INTO mydb.itensvendidos (dscQtd, catalogo_idCatalogo, pedido_idPedido) VALUES (1, 7, 3);
-INSERT INTO mydb.itensvendidos (dscQtd, catalogo_idCatalogo, pedido_idPedido) VALUES (1, 8, 3);
-INSERT INTO mydb.itensvendidos (dscQtd, catalogo_idCatalogo, pedido_idPedido) VALUES (3, 6, 4);
+INSERT INTO mydb.veiculo (idVeiculo, dscVeiculo, categoriaVeiculo_idCategoriaVeiculo, usuario_idUsuario) VALUES (1, 'Fiorino', 1, 10);
+INSERT INTO mydb.veiculo (idVeiculo, dscVeiculo, categoriaVeiculo_idCategoriaVeiculo, usuario_idUsuario) VALUES (2, 'Cavalo Mec√¢nico', 4, 9);
+INSERT INTO mydb.veiculo (idVeiculo, dscVeiculo, categoriaVeiculo_idCategoriaVeiculo, usuario_idUsuario) VALUES (3, 'Caminh√£o Ba√∫', 2, 11);
+INSERT INTO mydb.veiculo (idVeiculo, dscVeiculo, categoriaVeiculo_idCategoriaVeiculo, usuario_idUsuario) VALUES (4, 'Scania R-450', 2, 12);
+INSERT INTO mydb.veiculo (idVeiculo, dscVeiculo, categoriaVeiculo_idCategoriaVeiculo, usuario_idUsuario) VALUES (5, 'Volvo FH-540', 3, 13);
+INSERT INTO mydb.veiculo (idVeiculo, dscVeiculo, categoriaVeiculo_idCategoriaVeiculo, usuario_idUsuario) VALUES (6, 'Mercedes-Benz Accelo', 2, 14);
+INSERT INTO mydb.veiculo (idVeiculo, dscVeiculo, categoriaVeiculo_idCategoriaVeiculo, usuario_idUsuario) VALUES (7, 'VW Delivery 8160', 2, 15);
 
 COMMIT;

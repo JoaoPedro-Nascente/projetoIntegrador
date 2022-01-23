@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS mydb.usuario (
   dscNomeUsuario VARCHAR(50) NOT NULL,
   dscEmailUsuario VARCHAR(50) NOT NULL,
   dscSenhaUsuario VARCHAR(15) NOT NULL,
-  dscIdentificacaoUsuario VARCHAR(15) NOT NULL,
+  dscIdentificacaoUsuario VARCHAR(20) NOT NULL,
   dscUsuario VARCHAR(500) NULL,
   PRIMARY KEY (idUsuario)
  );
